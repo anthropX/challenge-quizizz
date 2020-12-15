@@ -106,8 +106,8 @@ router.get('/', async (req, res) => {
   }
 })
 
-const getRandomCards = (masteredCards, noOfMasteredToShow) =>
-  getShuffledArray(masteredCards).slice(0, noOfMasteredToShow)
+const getRandomCards = (cards, noOfCardsToShow) =>
+  getShuffledArray(cards).slice(0, noOfCardsToShow)
 
 function getShuffledArray (array) {
   const shuffledArray = [...array]
