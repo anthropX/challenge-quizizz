@@ -21,7 +21,7 @@ const getNext10RandomCards = async () => {
   const answeredCards = cards.filter((card) => card.responses.length !== 0)
   const unansweredCards = cards.filter((card) => card.responses.length === 0)
 
-  const { noOfAnsweredToShow, noOfUnansweredToShow } = await getCardsToShow(
+  const { noOfAnsweredToShow, noOfUnansweredToShow } = await getNoOfCardsToShow(
     answeredCards,
     unansweredCards
   )
@@ -31,7 +31,7 @@ const getNext10RandomCards = async () => {
   )
 }
 
-const getCardsToShow = async (answeredCards, unansweredCards) => {
+const getNoOfCardsToShow = async (answeredCards, unansweredCards) => {
   let allResponses = []
   answeredCards.forEach((card) => {
     allResponses = allResponses.concat(card.responses)
